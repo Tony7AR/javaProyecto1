@@ -10,5 +10,5 @@ INTEGRANTES: OSCAR SOLÍS BARRIENTOS, ANTHONY AZOFEIFA RAMÍREZ, ALESSANDRO BOGA
 */
 
 public enum Posicion {
-    
+    portero, defensa, medioCampista, delantero
 }
