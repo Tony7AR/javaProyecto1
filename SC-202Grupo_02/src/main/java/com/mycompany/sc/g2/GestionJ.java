@@ -106,7 +106,7 @@ public class GestionJ {
         }
         switch (Jugador.cantidadJugador) {
             case 1:
-                jugador1 = new Jugador(nombreJugador, Posicion.portero, equipoPertenencia, Estado.titular)
+                
                 break;
             default:
                 throw new AssertionError();

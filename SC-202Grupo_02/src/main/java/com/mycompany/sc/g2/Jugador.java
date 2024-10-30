@@ -37,12 +37,12 @@ public class Jugador {
     // || CONSTRUCTORES ||
     
     //String nombre, String correo, String direccion
-    public Jugador (String nombreJugador, Posicion posicion, Equipo equipoPertenencia, Estado estado){
+    public Jugador (String nombreJugador, Equipo equipoPertenencia){
         this.idJugador = consecutivoID;
         this.nombreJugador = nombreJugador;
         this.posicion = asignarPosicion();
         this.equipoPertenencia = equipoPertenencia;
-        this.estado = estado;
+        this.estado = asignarEstado();
         this.golesAnotados = consecutivoGoles;
         this.accionesTotales = consecutivoAcciones;
         consecutivoID++;
@@ -93,6 +93,26 @@ public class Jugador {
                     
         }
         return getPosicion();
+    }
+    
+    public Estado asignarEstado (){
+        String botonesEstado[] = {"Titular", "Suplente", "Libre"};
+        int botonEstado = JOptionPane.showOptionDialog(null, "Seleccione un Estado para el Jugador.", "Seleccionar Estado", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, botonesEstado, "Libre");
+
+        switch (botonEstado) {
+            case 0: //Titular
+                setEstado(Estado.titular);
+                break;
+            case 1://Suplente
+                setEstado(Estado.suplente);
+                break;
+                
+            case 2://Libre
+                setEstado(Estado.libre);
+                break;
+                
+        }
+        return getEstado();
     }
     // || GETS AND SETS ||
     
