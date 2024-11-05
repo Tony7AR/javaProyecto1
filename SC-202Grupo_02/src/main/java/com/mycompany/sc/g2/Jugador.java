@@ -37,7 +37,7 @@ public class Jugador {
     // || CONSTRUCTORES ||
     
     //String nombre, String correo, String direccion
-    public Jugador (String nombreJugador, Equipo equipoPertenencia){
+    public Jugador (String nombreJugador){
         this.idJugador = consecutivoID;
         this.nombreJugador = nombreJugador;
         this.posicion = asignarPosicion();

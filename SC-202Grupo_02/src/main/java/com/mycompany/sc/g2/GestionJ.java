@@ -9,9 +9,9 @@ INTEGRANTES: OSCAR SOLÍS BARRIENTOS, ANTHONY AZOFEIFA RAMÍREZ, ALESSANDRO BOGA
 || PROYECTO FÚTBOL CINCO ||
 
 
-*/
-
+ */
 public class GestionJ {
+
     // || ATRIBUTOS ||
     private static Jugador jugador1;
     private static Jugador jugador2;
@@ -83,66 +83,380 @@ public class GestionJ {
     private static Jugador jugador68;
     private static Jugador jugador69;
     private static Jugador jugador70;
-    
-    
-    
-    
-    
-    
 
-    
-    
-    
     // || MÉTODOS PARA EL MENÚ ||
-    
-    public static void MostrarJugador(){
-        
+    public static void MostrarJugador() {
+
     }
-    
-    public static void AgregarJugador(){
-        if (Jugador.cantidadJugador ==70) {
+
+    public static void AgregarJugador() {
+        if (Jugador.cantidadJugador == 70) {
             JOptionPane.showMessageDialog(null, "Este Sistema solo puede gestionar 70 Jugadores.");
             return;
+
         }
+        String nombreJugador = JOptionPane.showInputDialog("Ingrese el nombre del Jugador #" + (Jugador.cantidadJugador + 1) + ": ");
+        
         switch (Jugador.cantidadJugador) {
-            case 1:
-                
+            case 0:
+                jugador1 = new Jugador(nombreJugador);
+
                 break;
-            default:
-                throw new AssertionError();
+            case 1:
+                jugador2 = new Jugador(nombreJugador);
+
+                break;
+            case 2:
+                jugador3 = new Jugador(nombreJugador);
+
+                break;
+            case 3:
+                jugador4 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 4:
+                jugador5 = new Jugador(nombreJugador);
+
+                break;
+            case 5:
+                jugador6 = new Jugador(nombreJugador);
+
+                break;
+            case 6:
+                jugador7 = new Jugador(nombreJugador);
+
+                break;
+            case 7:
+                jugador8 = new Jugador(nombreJugador);
+
+                break;
+            case 8:
+                jugador9 = new Jugador(nombreJugador);
+
+                break;
+            case 9:
+                jugador10 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 10:
+                jugador11 = new Jugador(nombreJugador);
+
+                break;
+            case 11:
+                jugador12 = new Jugador(nombreJugador);
+
+                break;
+            case 12:
+                jugador13 = new Jugador(nombreJugador);
+
+                break;
+            case 13:
+                jugador14 = new Jugador(nombreJugador);
+
+                break;
+            case 14:
+                jugador15 = new Jugador(nombreJugador);
+
+                break;
+            case 15:
+                jugador16 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 16:
+                jugador17 = new Jugador(nombreJugador);
+
+                break;
+            case 17:
+                jugador18 = new Jugador(nombreJugador);
+
+                break;
+            case 18:
+                jugador19 = new Jugador(nombreJugador);
+
+                break;
+            case 19:
+                jugador20 = new Jugador(nombreJugador);
+
+                break;
+            case 20:
+                jugador21 = new Jugador(nombreJugador);
+
+                break;
+            case 21:
+                jugador22 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 22:
+                jugador23 = new Jugador(nombreJugador);
+
+                break;
+            case 23:
+                jugador24 = new Jugador(nombreJugador);
+
+                break;
+            case 24:
+                jugador25 = new Jugador(nombreJugador);
+
+                break;
+            case 25:
+                jugador26 = new Jugador(nombreJugador);
+
+                break;
+            case 26:
+                jugador27 = new Jugador(nombreJugador);
+
+                break;
+            case 27:
+                jugador28 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 28:
+                jugador29 = new Jugador(nombreJugador);
+
+                break;
+            case 29:
+                jugador30 = new Jugador(nombreJugador);
+
+                break;
+            case 30:
+                jugador31 = new Jugador(nombreJugador);
+
+                break;
+            case 31:
+                jugador32 = new Jugador(nombreJugador);
+
+                break;
+            case 32:
+                jugador33 = new Jugador(nombreJugador);
+
+                break;
+            case 33:
+                jugador34 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 34:
+                jugador35 = new Jugador(nombreJugador);
+
+                break;
+            case 35:
+                jugador36 = new Jugador(nombreJugador);
+
+                break;
+            case 36:
+                jugador37 = new Jugador(nombreJugador);
+
+                break;
+            case 37:
+                jugador38 = new Jugador(nombreJugador);
+
+                break;
+            case 38:
+                jugador39 = new Jugador(nombreJugador);
+
+                break;
+            case 39:
+                jugador40 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 40:
+                jugador41 = new Jugador(nombreJugador);
+
+                break;
+            case 41:
+                jugador42 = new Jugador(nombreJugador);
+
+                break;
+            case 42:
+                jugador43 = new Jugador(nombreJugador);
+
+                break;
+            case 43:
+                jugador44 = new Jugador(nombreJugador);
+
+                break;
+            case 44:
+                jugador45 = new Jugador(nombreJugador);
+
+                break;
+            case 45:
+                jugador46 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 46:
+                jugador47 = new Jugador(nombreJugador);
+
+                break;
+            case 47:
+                jugador48 = new Jugador(nombreJugador);
+
+                break;
+            case 48:
+                jugador49 = new Jugador(nombreJugador);
+
+                break;
+            case 49:
+                jugador50 = new Jugador(nombreJugador);
+
+                break;
+            case 50:
+                jugador51 = new Jugador(nombreJugador);
+
+                break;
+            case 51:
+                jugador52 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 52:
+                jugador53 = new Jugador(nombreJugador);
+
+                break;
+            case 53:
+                jugador54 = new Jugador(nombreJugador);
+
+                break;
+            case 54:
+                jugador55 = new Jugador(nombreJugador);
+
+                break;
+            case 55:
+                jugador56 = new Jugador(nombreJugador);
+
+                break;
+            case 56:
+                jugador57 = new Jugador(nombreJugador);
+
+                break;
+            case 57:
+                jugador58 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 58:
+                jugador59 = new Jugador(nombreJugador);
+
+                break;
+            case 59:
+                jugador60 = new Jugador(nombreJugador);
+
+                break;
+            case 60:
+                jugador61 = new Jugador(nombreJugador);
+
+                break;
+            case 61:
+                jugador62 = new Jugador(nombreJugador);
+
+                break;
+            case 62:
+                jugador63 = new Jugador(nombreJugador);
+
+                break;
+            case 63:
+                jugador64 = new Jugador(nombreJugador);
+
+                break;
+                
+            case 64:
+                jugador65 = new Jugador(nombreJugador);
+
+                break;
+            case 65:
+                jugador66 = new Jugador(nombreJugador);
+
+                break;
+            case 66:
+                jugador67 = new Jugador(nombreJugador);
+
+                break;
+            case 67:
+                jugador68 = new Jugador(nombreJugador);
+
+                break;
+            case 68:
+                jugador69 = new Jugador(nombreJugador);
+
+                break;
+            case 69:
+                jugador70 = new Jugador(nombreJugador);
+
+                break;
         }
-    }   
-    
-    public static void EditarJugador(){
-        
     }
-    
-    public static void EliminarJugador(){
-        
+
+    public static void EditarJugador() {
+
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
+    public static void EliminarJugador() {
+
+    }
+
     // || MÉTODOS GENERALES ||
+    //Esto es un ejemplo tomado de la practica del profe hay que adaptarlo al proyecto
+    private static Equipo seleccionEquipo(){
+        if (Cliente.cantidadClientes == 0) {
+            JOptionPane.showMessageDialog(null, "No hay Clientes en el Sistema.");
+            return null;
+        }
+        int valorBoton = JOptionPane.showOptionDialog(null, "¿Seleccione un Cliente?",
+                "Seleccione", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+                null, botones(), "Cliente #1");
+        switch (valorBoton) {
+            case 0:
+                return cliente1;
+            case 1:
+                return cliente2;
+            case 2:
+                return cliente3;
+
+        }
+        return null;
+    }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    //Esto es un ejemplo tomado de la practica del profe hay que adaptarlo al proyecto
+    private static Jugador seleccionJugador(){
+        if (Cliente.cantidadClientes == 0) {
+            JOptionPane.showMessageDialog(null, "No hay Clientes en el Sistema.");
+            return null;
+        }
+        int valorBoton = JOptionPane.showOptionDialog(null, "¿Seleccione un Cliente?",
+                "Seleccione", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+                null, botones(), "Cliente #1");
+        switch (valorBoton) {
+            case 0:
+                return cliente1;
+            case 1:
+                return cliente2;
+            case 2:
+                return cliente3;
+
+        }
+        return null;
+    }
+    //Esto es un ejemplo tomado de la practica del profe hay que adaptarlo al proyecto
+    private static String [] botones(){
+        if (Cliente.cantidadClientes == 1) {
+            String botones [] = {"Cliente #1"};
+            return botones;
+        }else if (Cliente.cantidadClientes == 2){
+            String botones [] = {"Cliente #1","Cliente #2"};
+            return botones;
+        }else if (Cliente.cantidadClientes == 3){
+            String botones [] = {"Cliente #1", "Cliente #2", "Cliente #3"};
+            return botones;
+        }
+        return null;
+    }
     
     // || GETS AND SETS ||
-    
-    
-    
 }
