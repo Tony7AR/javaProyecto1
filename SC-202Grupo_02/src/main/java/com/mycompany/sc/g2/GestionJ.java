@@ -91,8 +91,11 @@ los 30 nombres
     
     
     public static void MostrarJugador() {
-        
-
+        Jugador jugador = cantidadJugador();
+        if (cliente == null){
+        return;    
+        }
+        jugador.mostarDetalles();
     }
 
     public static void AgregarJugador() {
@@ -399,7 +402,15 @@ los 30 nombres
     }
 
     public static void EditarJugador() {
+        Jugador jugador = cantidadJugador;
+        if (cliente == null) {
+            return;
+         }   
+        String nombreJugador = JoptionPane.showInputDialog("Ingrese el nuevo nombre del jugador ");
+        
+        jugador.setNombre(nombre);
 
+        JoptionPane.showMessageDialog(null, "Datos del jugardor actualizados" );
     }
 
     public static void EliminarJugador() {
