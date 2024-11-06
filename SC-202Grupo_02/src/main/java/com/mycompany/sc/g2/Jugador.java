@@ -59,15 +59,13 @@ public class Jugador {
     
     
     // || METODOS ||
-    private void mostrarDetalles (){
-        JOptionPane.showMessageDialog(null, "DATOS DEL JUGADOR: " + getIdJugador() +
-                "\nNombre: " + getNombreJugador() + "\nPosición: " + getPosicion() + "\nEquipo de Pertenencia: " 
-                + getEquipoPertenencia()+ "\nEstado: " + getEstado() + "\nGoles Anotados: " + golesAnotados);
+    private void mostrarDetallesJugador (){
+        JOptionPane.showMessageDialog(null, "ID: " + getIdJugador()+
+                "\nNombre: " + getNombreJugador()+ "\nPosición: " + getPosicion()+ "\nEquipo: " 
+                + getEquipoPertenencia()+ "\nEstado: " + getEstado()+ "\nGoles Anotados: " + getGolesAnotados());
     }
     
-    public Estado estadoJugador (){
-        return null;
-    }
+    
     
     
     

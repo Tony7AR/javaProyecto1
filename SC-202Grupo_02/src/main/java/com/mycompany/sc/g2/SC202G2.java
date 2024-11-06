@@ -18,39 +18,36 @@ public class SC202G2 {
         
         
         do {
-            opt = Integer.parseInt((JOptionPane.showInputDialog("----- [MENU GESTIÓN DE PARTIDOS FÚTBOL CINCO]-----"
+            opt = Integer.parseInt((JOptionPane.showInputDialog("[ MENÚ GESTIÓN DE PARTIDOS FÚTBOL 5 ]"
                     + "\n1- Gestión de Jugadores.\n"
                     + "2- Gestión de Equipos.\n"
                     + "3- Simulación de Partidos.\n"
                     + "4- Reportes.\n"
                     + "5- Salir del Sistema.\n")));
-//Esto es un ejemplo tomado de la practica del profe hay que adaptarlo al proyecto
+
             switch (opt) {
                 case 1: //Agregar Cliente
-                    Gestion.AgregarCliente();
+                    Gestion.MenuGestionJ();
                     break;
-                case 2: //Editar Cliente
-                    Gestion.EditarCliente();
+                case 2: //Gestion de Equipos
+                    Gestion.MenuGestionE();
                     break;
-                case 3: //Mostrar Cliente
-                    Gestion.MostrarCliente();
+                case 3: //Simualcion de Partidos
+                    Gestion.SimulacionPartidos();
                     break;
-                case 4: //Solitar Pedido
-                    Gestion.SolicitarPedido();
+                case 4: //Reportes
+                    Gestion.Reportes();
 
                     break;
-                case 5: //Mostrar Pedido
-                    Gestion.MostrarPedido();
-                    break;
-                case 6: //Salir
-                    JOptionPane.showMessageDialog(null, "Gracias por usar el Sistema de Gestion de Clientes.");
+                case 5: //Salir del Sistema
+                    JOptionPane.showMessageDialog(null, "Gracias por usar el Sistema Partidos Fut 5.");
 
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opcion del menu no valida.");
+                    JOptionPane.showMessageDialog(null, "Opción del Menú No Válida.");
             }
 
-        } while (opt != 6);
+        } while (opt != 5);
         
         
     }
