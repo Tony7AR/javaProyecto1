@@ -91,7 +91,7 @@ los 30 nombres
     
     
     public static void MostrarJugador() {
-        
+        hdhdhdg
 
     }
 
