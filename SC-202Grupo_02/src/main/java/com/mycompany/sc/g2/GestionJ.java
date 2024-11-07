@@ -91,7 +91,15 @@ los 30 nombres
     
     
     public static void MostrarJugador() {
-        
+        Jugador jugador = cantidaJjugador();
+        if (jugador == null) {
+            return;
+        }
+        if (jugador.jugador () == null) {
+            JoptionPane.showMessageDialog(null,"El jugador " + jugador.getnombrejugador() + "No está registrado");
+        }else {
+            JoptionPane.showMessageDialog(null, jugador.getIdJugador().mostrarDetallesJugador());
+        }    
 
     }
 
@@ -399,8 +407,17 @@ los 30 nombres
     }
 
     public static void EditarJugador() {
+        Jugador jugador == cantidadJugador();
+        if (jugador == null) {
+             return;
+        }
+             string nombreJugador = JoptionPane.showInputDialog("Ingrese el nuevo nombre del jugador: ");
+             string IdJugador = joptionPane.showInputDialog("Ingrese el nuevo ID del jugador: ");
+        jugador.setnombreJugador ();
+        jugador.setidjugador();
 
-    }
+        JoptionPane.showMessageDialog(null,"Los datos han sido cambiados exitosamente");
+        }
 
     public static void EliminarJugador() {
 
