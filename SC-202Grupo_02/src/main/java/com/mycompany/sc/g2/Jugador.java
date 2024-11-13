@@ -37,16 +37,17 @@ public class Jugador {
     // || CONSTRUCTORES ||
     
     //String nombre
-    public Jugador (String nombreJugador, int idJugador, Estado estado ){
-        this.idJugador = consecutivoID;
-        this.nombreJugador = nombreJugador;
-        this.posicion = asignarPosicion();
+    public Jugador (String nombreJugador, int idJugador , Estado estado, Posicion posicion  ){
+        this.idJugador = getIdJugador();
+        this.nombreJugador = getNombreJugador();
+        setPosicion(posicion);
         this.equipoPertenencia = equipoPertenencia;
-        this.estado = asignarEstado();
+        setEstado(estado);
         this.golesAnotados = consecutivoGoles;
         this.accionesTotales = consecutivoAcciones;
         consecutivoID++;
         cantidadJugador++;
+        
         
     }
     
@@ -70,6 +71,7 @@ public class Jugador {
     
     
     public Posicion asignarPosicion (){
+        
         String botonesPosicion[] = {"Delantero", "Mediocampista", "Defensa", "Portero"};
         int botonPosicion = JOptionPane.showOptionDialog(null, "Seleccione una Posición", "Seleccionar Posición", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, botonesPosicion, "Delantero");
 
@@ -104,13 +106,13 @@ public class Jugador {
             case 1://Suplente
                 setEstado(Estado.suplente);
                 break;
-                
+
             case 2://Libre
                 setEstado(Estado.libre);
                 break;
-                
         }
         return getEstado();
+        
     }
     // || GETS AND SETS ||
     
@@ -132,10 +134,15 @@ public class Jugador {
     }
 
     public Posicion getPosicion() {
+        
         return posicion;
     }
 
     public void setPosicion(Posicion posicion) {
+       if (posicion == Posicion.sinPosicion) {
+            asignarPosicion();
+            
+        }
         this.posicion = posicion;
     }
 
@@ -148,10 +155,15 @@ public class Jugador {
     }
 
     public Estado getEstado() {
+        
         return estado;
     }
 
     public void setEstado(Estado estado) {
+        if (estado == Estado.sinEstado) {
+            asignarEstado();
+            
+        }
         this.estado = estado;
     }
 

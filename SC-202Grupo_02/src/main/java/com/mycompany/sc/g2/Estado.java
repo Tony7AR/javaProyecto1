@@ -9,6 +9,6 @@ INTEGRANTES: OSCAR SOLÍS BARRIENTOS, ANTHONY AZOFEIFA RAMÍREZ, ALESSANDRO BOGA
 */
 
 public enum Estado {
-    suplente, titular, libre
+    suplente, titular, libre, sinEstado
     
 }

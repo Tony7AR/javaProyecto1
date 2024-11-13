@@ -22,37 +22,38 @@ los 30 nombres
 //        edades[2] = 52;
 //        edades[0] = 18;
 //        edades[4] = edades[2]- edades[0];
-    private static Jugador jugador1 = new Jugador("Alessandro Calero", 10, Estado.titular);
-    private static Jugador jugador2 = new Jugador("Carlos Gómez", 11, Estado.suplente);
-    private static Jugador jugador3= new Jugador("David Matínez", 12, Estado.titular);
-    private static Jugador jugador4= new Jugador("Juan Rodríguez", 13, Estado.suplente);
-    private static Jugador jugador5= new Jugador("Andrés Sánchez", 14, Estado.suplente);
-    private static Jugador jugador6= new Jugador("Luis López", 15, Estado.libre);
-    private static Jugador jugador7= new Jugador("José Fernández", 16, Estado.suplente);
-    private static Jugador jugador8= new Jugador("Josue González", 17, Estado.titular);
-    private static Jugador jugador9= new Jugador("Miguel Díaz", 18, Estado.libre);
-    private static Jugador jugador10= new Jugador("Javier Herrera", 19, Estado.libre);
-    private static Jugador jugador11= new Jugador("Jonathan García", 20, Estado.titular);
-    private static Jugador jugador12 = new Jugador("Antonio Jiménez", 21, Estado.suplente);
-    private static Jugador jugador13= new Jugador("Pedro Ruíz", 22, Estado.libre);
-    private static Jugador jugador14= new Jugador("Jafeth Romero", 23, Estado.titular);
-    private static Jugador jugador15= new Jugador("Sergio Ramírez", 24, Estado.titular);
-    private static Jugador jugador16= new Jugador("Rafael Vargas", 25, Estado.libre);
-    private static Jugador jugador17= new Jugador("Enrique Morales", 26, Estado.libre);
-    private static Jugador jugador18= new Jugador("Manuel Castro", 27, Estado.titular);
-    private static Jugador jugador19= new Jugador("Sebastian Ortega", 28, Estado.suplente);
-    private static Jugador jugador20= new Jugador("Alex Delgado", 29, Estado.titular);
-    private static Jugador jugador21= new Jugador("Victor Navarro", 30, Estado.libre);
-    private static Jugador jugador22= new Jugador("Darian Soto", 31, Estado.titular);
-    private static Jugador jugador23= new Jugador("Anthony Ramírez", 32, Estado.titular);
-    private static Jugador jugador24= new Jugador("Oscar Barrientos", 33, Estado.titular);
-    private static Jugador jugador25= new Jugador("Junior Muñoz", 34, Estado.titular);
-    private static Jugador jugador26= new Jugador("John Romero", 35, Estado.titular);
-    private static Jugador jugador27 = new Jugador("Aaron López", 36, Estado.titular);
-    private static Jugador jugador28= new Jugador("Eddy Sánchez", 37, Estado.titular);
-    private static Jugador jugador29= new Jugador("Ángel Molina", 38, Estado.libre);
-    private static Jugador jugador30= new Jugador("Martín Saavedra", 39, Estado.libre);
-    private static Jugador jugador31= new Jugador("Deiby Soto", 40, Estado.titular);
+//    "Alessandro Calero", 10, Estado.titular
+    private static Jugador jugador1 = new Jugador ("Alessandro Calero", 10, Estado.titular, Posicion.delantero);//Equipo 1
+    private static Jugador jugador2 = new Jugador("Carlos Gómez", 11, Estado.suplente, Posicion.defensa);//Equipo1
+    private static Jugador jugador3= new Jugador("David Matínez", 12, Estado.titular, Posicion.delantero);//Equipo 1
+    private static Jugador jugador4= new Jugador("Juan Rodríguez", 13, Estado.suplente, Posicion.medioCampista);//Equipo1
+    private static Jugador jugador5= new Jugador("Andrés Sánchez", 14, Estado.suplente, Posicion.defensa);//Equipo2
+    private static Jugador jugador6= new Jugador("Luis López", 15, Estado.libre, Posicion.delantero);
+    private static Jugador jugador7= new Jugador("José Fernández", 16, Estado.suplente, Posicion.delantero);//Equipo2
+    private static Jugador jugador8= new Jugador("Josue González", 17, Estado.titular, Posicion.medioCampista);//Equipo 1
+    private static Jugador jugador9= new Jugador("Miguel Díaz", 18, Estado.libre, Posicion.delantero);
+    private static Jugador jugador10= new Jugador("Javier Herrera", 19, Estado.libre, Posicion.defensa);
+    private static Jugador jugador11= new Jugador("Jonathan García", 20, Estado.titular, Posicion.delantero);//Equipo 2
+    private static Jugador jugador12 = new Jugador("Antonio Jiménez", 21, Estado.suplente, Posicion.defensa);//Equipo3
+    private static Jugador jugador13= new Jugador("Pedro Ruíz", 22, Estado.libre, Posicion.defensa);
+    private static Jugador jugador14= new Jugador("Jafeth Romero", 23, Estado.titular, Posicion.delantero);
+    private static Jugador jugador15= new Jugador("Sergio Ramírez", 24, Estado.titular, Posicion.medioCampista);//Equipo 2
+    private static Jugador jugador16= new Jugador("Rafael Vargas", 25, Estado.libre, Posicion.defensa);
+    private static Jugador jugador17= new Jugador("Enrique Morales", 26, Estado.libre, Posicion.delantero);
+    private static Jugador jugador18= new Jugador("Manuel Castro", 27, Estado.titular, Posicion.defensa);//Equipo 1
+    private static Jugador jugador19= new Jugador("Sebastian Ortega", 28, Estado.suplente, Posicion.medioCampista);//Equipo3
+    private static Jugador jugador20= new Jugador("Alex Delgado", 29, Estado.titular, Posicion.defensa);//Equipo 2
+    private static Jugador jugador21= new Jugador("Victor Navarro", 30, Estado.libre, Posicion.medioCampista);
+    private static Jugador jugador22= new Jugador("Darian Soto", 31, Estado.titular, Posicion.medioCampista);//Equipo 2
+    private static Jugador jugador23= new Jugador("Anthony Ramírez", 32, Estado.titular, Posicion.portero);//Equipo 1
+    private static Jugador jugador24= new Jugador("Oscar Barrientos", 33, Estado.titular, Posicion.portero);//Equipo 2
+    private static Jugador jugador25= new Jugador("Junior Muñoz", 34, Estado.titular, Posicion.defensa);//Equipo 3
+    private static Jugador jugador26= new Jugador("John Romero", 35, Estado.titular, Posicion.medioCampista);//Equipo 3
+    private static Jugador jugador27 = new Jugador("Aaron López", 36, Estado.titular, Posicion.portero);//Equipo 3
+    private static Jugador jugador28= new Jugador("Eddy Sánchez", 37, Estado.titular, Posicion.delantero);//Equipo 3
+    private static Jugador jugador29= new Jugador("Ángel Molina", 38, Estado.libre, Posicion.medioCampista);
+    private static Jugador jugador30= new Jugador("Martín Saavedra", 39, Estado.libre, Posicion.portero);
+    private static Jugador jugador31= new Jugador("Deiby Soto", 40, Estado.titular, Posicion.defensa);//Equipo 3
     private static Jugador jugador32;
     private static Jugador jugador33;
     private static Jugador jugador34;
@@ -99,15 +100,12 @@ los 30 nombres
 
     // || MÉTODOS PARA EL MENÚ ||
     public static void MostrarJugador() {
-        Jugador jugador = seleccionJugador();
-        if (jugador == null) {
+        Equipo escogerEquipos = GestionE.seleccionEquipo();
+        if (escogerEquipos == null) {
             return;
         }
-        if (todosJugadores() == null) {
-            JOptionPane.showMessageDialog(null, "El jugador " + jugador.getNombreJugador() + "No está registrado");
-        } else {
-            JOptionPane.showMessageDialog(null, todosJugadores());
-        }
+        
+        
 
     }
     
@@ -121,220 +119,211 @@ los 30 nombres
             return;
             
         }
-        jugadores[0] = getJugador1();
-        jugadores[1] = getJugador2();
-        jugadores[2] = getJugador3();
-        jugadores[3] = getJugador4();
-        jugadores[4] = getJugador5();
-        jugadores[5] = getJugador6();
-        jugadores[6] = getJugador7();
-        jugadores[7] = getJugador8();
-        jugadores[8] = getJugador9();
-        jugadores[9] = getJugador10();
-        jugadores[10] = getJugador11();
-        jugadores[11] = getJugador12();
-        jugadores[12] = getJugador13();
-        jugadores[13] = getJugador14();
-        jugadores[14] = getJugador15();
-        jugadores[15] = getJugador16();
-        jugadores[16] = getJugador17();
-        jugadores[17] = getJugador18();
-        jugadores[18] = getJugador19();
-        jugadores[19] = getJugador20();
-        jugadores[20] = getJugador21();
-        jugadores[21] = getJugador22();
-        jugadores[22] = getJugador23();
-        jugadores[23] = getJugador24();
-        jugadores[24] = getJugador25();
-        jugadores[25] = getJugador26();
-        jugadores[26] = getJugador27();
-        jugadores[27] = getJugador28();
-        jugadores[28] = getJugador29();
-        jugadores[29] = getJugador30();
-        jugadores[30] = getJugador31();
+        jugadores[0] = jugador1;
+        jugadores[1] = jugador2;
+        jugadores[2] = jugador3;
+        jugadores[3] = jugador4;
+        jugadores[4] = jugador5;
+        jugadores[5] = jugador6;
+        jugadores[6] = jugador7;
+        jugadores[7] = jugador8;
+        jugadores[8] = jugador9;
+        jugadores[9] = jugador10;
+        jugadores[10] = jugador11;
+        jugadores[11] = jugador12;
+        jugadores[12] = jugador13;
+        jugadores[13] = jugador14;
+        jugadores[14] = jugador15;
+        jugadores[15] = jugador16;
+        jugadores[16] = jugador17;
+        jugadores[17] = jugador18;
+        jugadores[18] = jugador19;
+        jugadores[19] = jugador20;
+        jugadores[20] = jugador21;
+        jugadores[21] = jugador22;
+        jugadores[22] = jugador23;
+        jugadores[23] = jugador24;
+        jugadores[24] = jugador25;
+        jugadores[25] = jugador26;
+        jugadores[26] = jugador27;
+        jugadores[27] = jugador28;
+        jugadores[28] = jugador29;
+        jugadores[29] = jugador30;
+        jugadores[30] = jugador31;
         
         
        
         String nombreJugador = JOptionPane.showInputDialog("Ingrese el nombre del Jugador #" + (Jugador.cantidadJugador + 1) + ": ");
+        
 
         switch (Jugador.cantidadJugador) {
             case 31:
-                jugador32 = new Jugador(nombreJugador, 41, Estado.libre);
+                jugador32 = new Jugador(nombreJugador, 41, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[31] = getJugador32();
 
                 break;
             case 32:
-                jugador33 = new Jugador(nombreJugador, 42, Estado.libre);
+                jugador33 = new Jugador(nombreJugador, 42, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[32] = getJugador33();
                 break;
             case 33:
-                jugador34 = new Jugador(nombreJugador, 43, Estado.libre);
+                jugador34 = new Jugador(nombreJugador, 43, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[33] = getJugador34();
                 break;
 
             case 34:
-                jugador35 = new Jugador(nombreJugador, 44, Estado.libre);
+                jugador35 = new Jugador(nombreJugador, 44, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[34] = getJugador35();
                 break;
             case 35:
-                jugador36 = new Jugador(nombreJugador, 45, Estado.libre);
+                jugador36 = new Jugador(nombreJugador, 45, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[35] = getJugador36();
                 break;
             case 36:
-                jugador37 = new Jugador(nombreJugador, 46, Estado.libre);
+                jugador37 = new Jugador(nombreJugador, 46, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[36] = getJugador37();
                 break;
             case 37:
-                jugador38 = new Jugador(nombreJugador, 47, Estado.libre);
+                jugador38 = new Jugador(nombreJugador, 47, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[37] = getJugador38();
                 break;
             case 38:
-                jugador39 = new Jugador(nombreJugador, 48, Estado.libre);
+                jugador39 = new Jugador(nombreJugador, 48, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[38] = getJugador39();
                 break;
             case 39:
-                jugador40 = new Jugador(nombreJugador, 49, Estado.libre);
+                jugador40 = new Jugador(nombreJugador, 49, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[39] = getJugador40();
                 break;
 
             case 40:
-                jugador41 = new Jugador(nombreJugador, 50, Estado.libre);
+                jugador41 = new Jugador(nombreJugador, 50, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[40] = getJugador41();
                 break;
             case 41:
-                jugador42 = new Jugador(nombreJugador, 51, Estado.libre);
+                jugador42 = new Jugador(nombreJugador, 51, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[41] = getJugador42();
                 break;
             case 42:
-                jugador43 = new Jugador(nombreJugador, 52, Estado.libre);
+                jugador43 = new Jugador(nombreJugador, 52, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[42] = getJugador43();
                 break;
             case 43:
-                jugador44 = new Jugador(nombreJugador, 53, Estado.libre);
+                jugador44 = new Jugador(nombreJugador, 53, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[43] = getJugador44();
                 break;
             case 44:
-                jugador45 = new Jugador(nombreJugador, 54, Estado.libre);
+                jugador45 = new Jugador(nombreJugador, 54, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[44] = getJugador45();
                 break;
             case 45:
-                jugador46 = new Jugador(nombreJugador, 55, Estado.libre);
+                jugador46 = new Jugador(nombreJugador, 55, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[45] = getJugador46();
                 break;
                 
             case 46:
-                jugador47 = new Jugador(nombreJugador, 56, Estado.libre);
+                jugador47 = new Jugador(nombreJugador, 56, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[46] = getJugador47();
                 break;
             case 47:
-                jugador48 = new Jugador(nombreJugador, 57, Estado.libre);
+                jugador48 = new Jugador(nombreJugador, 57, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[47] = getJugador48();
                 break;
             case 48:
-                jugador49 = new Jugador(nombreJugador, 58, Estado.libre);
+                jugador49 = new Jugador(nombreJugador, 58, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[48] = getJugador49();
                 break;
             case 49:
-                jugador50 = new Jugador(nombreJugador, 59, Estado.libre);
+                jugador50 = new Jugador(nombreJugador, 59, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[49] = getJugador50();
                 break;
             case 50:
-                jugador51 = new Jugador(nombreJugador, 60, Estado.libre);
+                jugador51 = new Jugador(nombreJugador, 60, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[50] = getJugador51();
                 break;
             case 51:
-                jugador52 = new Jugador(nombreJugador, 61, Estado.libre);
+                jugador52 = new Jugador(nombreJugador, 61, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[51] = getJugador52();
                 break;
 
             case 52:
-                jugador53 = new Jugador(nombreJugador, 62, Estado.libre);
+                jugador53 = new Jugador(nombreJugador, 62, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[52] = getJugador53();
                 break;
             case 53:
-                jugador54 = new Jugador(nombreJugador, 63, Estado.libre);
+                jugador54 = new Jugador(nombreJugador, 63, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[53] = getJugador54();
                 break;  
             case 54:
-                jugador55 = new Jugador(nombreJugador, 64, Estado.libre);
+                jugador55 = new Jugador(nombreJugador, 64, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[54] = getJugador55();
                 break;
             case 55:
-                jugador56 = new Jugador(nombreJugador, 65, Estado.libre);
+                jugador56 = new Jugador(nombreJugador, 65, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[55] = getJugador56();
                 break;
             case 56:
-                jugador57 = new Jugador(nombreJugador, 57, Estado.libre);
+                jugador57 = new Jugador(nombreJugador, 57, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[56] = getJugador32();
                 break;
             case 57:
-                jugador58 = new Jugador(nombreJugador, 67, Estado.libre);
+                jugador58 = new Jugador(nombreJugador, 67, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[57] = getJugador32();
                 break;
 
             case 58:
-                jugador59 = new Jugador(nombreJugador, 68, Estado.libre);
+                jugador59 = new Jugador(nombreJugador, 68, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[58] = getJugador32();
                 break;
             case 59:
-                jugador60 = new Jugador(nombreJugador, 69, Estado.libre);
+                jugador60 = new Jugador(nombreJugador, 69, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[59] = getJugador32();
                 break;
             case 60:
-                jugador61 = new Jugador(nombreJugador, 70, Estado.libre);
+                jugador61 = new Jugador(nombreJugador, 70, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[60] = getJugador32();
                 break;
             case 61:
-                jugador62 = new Jugador(nombreJugador, 71, Estado.libre);
+                jugador62 = new Jugador(nombreJugador, 71, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[61] = getJugador32();
                 break;
             case 62:
-                jugador63 = new Jugador(nombreJugador, 72, Estado.libre);
+                jugador63 = new Jugador(nombreJugador, 72, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[62] = getJugador32();
                 break;
             case 63:
-                jugador64 = new Jugador(nombreJugador, 73, Estado.libre);
+                jugador64 = new Jugador(nombreJugador, 73, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[63] = getJugador32();
                 break;
                 
             case 64:
-                jugador65 = new Jugador(nombreJugador, 74, Estado.libre);
+                jugador65 = new Jugador(nombreJugador, 74, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[64] = getJugador32();
                 break;
             case 65:
-                jugador66 = new Jugador(nombreJugador, 75, Estado.libre);
+                jugador66 = new Jugador(nombreJugador, 75, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[65] = getJugador32();
                 break;
             case 66:
-                jugador67 = new Jugador(nombreJugador, 76, Estado.libre);
+                jugador67 = new Jugador(nombreJugador, 76, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[66] = getJugador32();
                 break;
             case 67:
-                jugador68 = new Jugador(nombreJugador, 77, Estado.libre);
+                jugador68 = new Jugador(nombreJugador, 77, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[67] = getJugador32();
                 break;
             case 68:
-                jugador69 = new Jugador(nombreJugador, 78, Estado.libre);
+                jugador69 = new Jugador(nombreJugador, 78, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[68] = getJugador32();
                 break;
             case 69:
-                jugador70 = new Jugador(nombreJugador, 79, Estado.libre);
+                jugador70 = new Jugador(nombreJugador, 79, Estado.sinEstado, Posicion.sinPosicion);
                 jugadores[69] = getJugador32();
                 break;
         }
     }
     
-//    public static void ArregloJugadores(int indiceAJugadores, Jugador jugador){
-//        
-//        if (indiceAJugadores >= 0 && indiceAJugadores < jugadores.length) {
-//            jugadores[indiceAJugadores] = jugador;
-//        } else {
-//            System.out.println("Índice fuera de rango");
-//        }
-//        ArregloJugadores(0, jugador1);
-//        
-//    }
-//    jugadores[1]= jugador2;
+//    
 
     
     
@@ -357,46 +346,9 @@ los 30 nombres
     }
 
     // || MÉTODOS GENERALES ||
-    //Esto es un ejemplo tomado de la practica del profe hay que adaptarlo al proyecto
-//    private static Equipo seleccionEquipo(){
-//        if (Cliente.cantidadClientes == 0) {
-//            JOptionPane.showMessageDialog(null, "No hay Clientes en el Sistema.");
-//            return null;
-//        }
-//        int valorBoton = JOptionPane.showOptionDialog(null, "¿Seleccione un Cliente?",
-//                "Seleccione", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
-//                null, botones(), "Cliente #1");
-//        switch (valorBoton) {
-//            case 0:
-//                return cliente1;
-//            case 1:
-//                return cliente2;
-//            case 2:
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//                return cliente3;
-//
-//        }
-//        return null;
-//    }
-//    
-//    
-    private static Jugador seleccionJugador() {
+
+
+    /*private static Jugador seleccionJugador() {
 
         if (Jugador.cantidadJugador == 0) {
             JOptionPane.showMessageDialog(null, "No hay Jugadores en el Sistema.");
@@ -407,27 +359,7 @@ los 30 nombres
 
         return null;
     }
-
-    private static String todosJugadores() {
-
-        return null;
-
-    }
-//    //Esto es un ejemplo tomado de la practica del profe hay que adaptarlo al proyecto
-//    private static String [] botonesMotrarJugadores(){
-//        if (Jugador.cantidadJugador == 1) {
-//            String botones [] = {"Cliente #1"};
-//            return botones;
-//        }else if (Cliente.cantidadClientes == 2){
-//            String botones [] = {"Cliente #1","Cliente #2"};
-//            return botones;
-//        }else if (Cliente.cantidadClientes == 3){
-//            String botones [] = {"Cliente #1", "Cliente #2", "Cliente #3"};
-//            return botones;
-//        }
-//        return null;
-//    }
-    // String allJugadores [] = {jugador1.getNombreJugador()}; 
+    */
     // || GETS AND SETS ||
 
     public static Jugador getJugador1() {

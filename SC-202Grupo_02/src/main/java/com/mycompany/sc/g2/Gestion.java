@@ -66,10 +66,10 @@ public class Gestion {
 
             switch (opt) {
                 case 1: //Mostrar Equipos
-                    //Gestion.AgregarCliente();
+                    GestionE.seleccionEquipo();
                     break;
                 case 2: //Agregar Nuevo Equipo
-                    //Gestion.EditarCliente();
+                    GestionE.AgregarEquipo();
                     break;
                 case 3: //Agregar Jugador a un Equipo
                     //Gestion.MostrarCliente();

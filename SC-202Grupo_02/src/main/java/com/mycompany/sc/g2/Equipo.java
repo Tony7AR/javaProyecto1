@@ -15,7 +15,7 @@ public class Equipo {
     // || ATRIBUTOS ||
     private int idEquipo;
     private String nombreEquipo;
-    private Jugador jugadores;
+    private Jugador jugadoresE;
     private int partidosJugados;
     private int partidosGanados;
     private int partidosEmpatados;
@@ -24,6 +24,7 @@ public class Equipo {
     public int golesContra;
     public int posesionBalon;
     public static int consecutivoIdEquipo = 100;
+    public static int cantidadEquipos = 0;
 
 
     
@@ -39,7 +40,7 @@ public class Equipo {
     public Equipo (int idEquipo, String nombreEquipo){
         this.idEquipo = consecutivoIdEquipo;
         this.nombreEquipo = nombreEquipo;
-        this.jugadores = getJugadores();
+        this.jugadoresE = getJugadoresE();
         this.partidosJugados = getPartidosJugados();
         this.partidosGanados = getPartidosGanados();
         this.partidosPerdidos = getPartidosPerdidos();
@@ -48,6 +49,7 @@ public class Equipo {
         this.golesContra = golesContra;
         this.posesionBalon = posesionBalon;
         consecutivoIdEquipo++;
+        cantidadEquipos++;
     }
     
     
@@ -62,14 +64,14 @@ public class Equipo {
     
     private void mostrarDetallesEquipo (){
         JOptionPane.showMessageDialog(null, "DATOS DEL EQUIPO: " + getIdEquipo()+
-                "\nNombre de Equipo: " + getNombreEquipo()+ "\nJugadores: " + getJugadores()+ "\nPartidos Jugados: " 
+                "\nNombre de Equipo: " + getNombreEquipo()+ "\nJugadores: " + getJugadoresE()+ "\nPartidos Jugados: " 
                 + getPartidosJugados()+ "\nPartidos Ganados: " + getPartidosGanados()+ "\nPartidos Perdidos: " + getPartidosPerdidos()+"\nPartidos Empatados: "
                 + getPartidosEmpatados()+"\nGoles a Favor: "+ golesFavor + "\nGoles en Contra: "+ golesContra +"\nPosesión del Balón " +posesionBalon );
     }
     
     public Jugador asignarJugadorEquipo(){
         
-        return getJugadores();
+        return getJugadoresE();
     }
     
     
@@ -98,12 +100,12 @@ public class Equipo {
         this.nombreEquipo = nombreEquipo;
     }
 
-    public Jugador getJugadores() {
-        return jugadores;
+    public Jugador getJugadoresE() {
+        return jugadoresE;
     }
 
-    public void setJugadores(Jugador jugadores) {
-        this.jugadores = jugadores;
+    public void setJugadoresE(Jugador jugadoresE) {
+        this.jugadoresE = jugadoresE;
     }
 
     public int getPartidosJugados() {
