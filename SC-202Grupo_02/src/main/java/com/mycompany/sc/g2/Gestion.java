@@ -28,7 +28,7 @@ public class Gestion {
 
             switch (opt) {
                 case 1: //Mostrar Jugadores
-                    //Gestion.AgregarCliente();
+                    GestionJ.MostrarJugador();
                     break;
                 case 2: //Agregar Nuevo Jugador
                     GestionJ.AgregarJugador();

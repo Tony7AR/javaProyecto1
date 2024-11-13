@@ -12,7 +12,8 @@ INTEGRANTES: OSCAR SOLÍS BARRIENTOS, ANTHONY AZOFEIFA RAMÍREZ, ALESSANDRO BOGA
 */
 
 public class SC202G2 {
-
+    
+            
     public static void main(String[] args) {
          int opt;
         
@@ -48,6 +49,7 @@ public class SC202G2 {
             }
 
         } while (opt != 5);
+        
         
         
     }

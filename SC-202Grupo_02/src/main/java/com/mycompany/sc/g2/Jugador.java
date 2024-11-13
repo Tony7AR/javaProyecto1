@@ -59,7 +59,7 @@ public class Jugador {
     
     
     // || METODOS ||
-    private void mostrarDetallesJugador (){
+    public void mostrarDetallesJugador (){
         JOptionPane.showMessageDialog(null, "ID: " + getIdJugador()+
                 "\nNombre: " + getNombreJugador()+ "\nPosición: " + getPosicion()+ "\nEquipo: " 
                 + getEquipoPertenencia()+ "\nEstado: " + getEstado()+ "\nGoles Anotados: " + getGolesAnotados());
