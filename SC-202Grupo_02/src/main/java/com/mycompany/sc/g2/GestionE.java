@@ -24,7 +24,7 @@ public class GestionE {
     private static Equipo equipo9;
     private static Equipo equipo10;
 
-    private static Equipo equipos[] = new Equipo[10];
+    private static Equipo equipos[] = new Equipo[10]; //
 
     public static void MostrarEquipo() {
         Equipo equipo = seleccionEquipo();
