@@ -323,32 +323,30 @@ los 30 nombres
         }
     }
     
-//    
+    
 
+      // || MÉTODOS GENERALES ||
     
     
-    
-//    public static void EditarJugador() {
-//        Jugador jugador == cantidadJugador();
-//        if (jugador == null) {
-//            return;
-//        }
-//        string nombreJugador = JoptionPane.showInputDialog("Ingrese el nuevo nombre del jugador: ");
-//        string IdJugador = joptionPane.showInputDialog("Ingrese el nuevo ID del jugador: ");
-//        jugador.setnombreJugador();
-//        jugador.setidjugador();
-//
-//        JOptionPaneptionPane.showMessageDialog(null, "Los datos han sido cambiados exitosamente");
-//    }
+    public static void EditarJugador() { //Metodo para editar jugadores 
+        Jugador jugador == cantidadJugador();
+        if (jugador == null) {
+            return;
+        }
+        String nombreJugador = JOptionPane.showInputDialog("Ingrese el nuevo nombre del jugador: ");
+        String IdJugador = JOptionPane.showInputDialog("Ingrese el nuevo ID del jugador: ");
+        jugador.setnombreJugador();
+        jugador.setidjugador();
+
+        JOptionPaneptionPane.showMessageDialog(null, "Los datos han sido cambiados exitosamente");
+  }
 
     public static void EliminarJugador() {
 
-    }
-
-    // || MÉTODOS GENERALES ||
+    }6
 
 
-    /*private static Jugador seleccionJugador() {
+    private static Jugador seleccionJugador() { // Metodo para seleccionar jugadores 
 
         if (Jugador.cantidadJugador == 0) {
             JOptionPane.showMessageDialog(null, "No hay Jugadores en el Sistema.");
@@ -359,7 +357,7 @@ los 30 nombres
 
         return null;
     }
-    */
+    
     // || GETS AND SETS ||
 
     public static Jugador getJugador1() {
