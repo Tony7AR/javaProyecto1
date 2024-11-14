@@ -15,7 +15,7 @@ public class GestionE {
     // || ATRIBUTOS ||
     private static Equipo equipo1 = new Equipo(100, "Super Campeones");
     private static Equipo equipo2 = new Equipo(101, "Teen Titans");
-    private static Equipo equipo3 = new Equipo(102, "Ñaprissa");
+    private static Equipo equipo3 = new Equipo(102, "Saprissa");
     private static Equipo equipo4;
     private static Equipo equipo5;
     private static Equipo equipo6;
@@ -26,7 +26,7 @@ public class GestionE {
 
     private static Equipo equipos[] = new Equipo[10];
 
-    public static void MostrarEquipo() {
+    public static void MostrarEquipo() { // Metodo para mostar los equipos 
         Equipo equipo = seleccionEquipo();
         if (seleccionEquipo() == null) {
             return;
@@ -34,7 +34,7 @@ public class GestionE {
         equipo.mostrarDetallesEquipo();
     }
 
-    public static void AgregarEquipo() {
+    public static void AgregarEquipo() { // Metodo para agregar un equipo
 
         if (Equipo.cantidadEquipos == 10) {
             JOptionPane.showMessageDialog(null, "Este Sistema solo puede gestionar 10 Equipos.");
@@ -82,7 +82,7 @@ public class GestionE {
         }
     }
 
-    public static Equipo seleccionEquipo() {
+    public static Equipo seleccionEquipo() { // Metodo para seleccionar equipos 
         if (Equipo.cantidadEquipos == 0) {
             JOptionPane.showMessageDialog(null,
                     "No se ha agregado ningun Equipo al sistema.");
@@ -125,7 +125,7 @@ public class GestionE {
         return null;
     }
 
-    private static String[] botonesSE() {
+    private static String[] botonesSE() { // Creacion de Botones
        
        int i;
        i = equipos.length;
