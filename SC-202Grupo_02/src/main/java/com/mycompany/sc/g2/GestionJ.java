@@ -99,7 +99,8 @@ los 30 nombres
     
 
     // || MÉTODOS PARA EL MENÚ ||
-    public static void MostrarJugador() {
+    
+    public static void MostrarJugador() { // Metodo de mostar jugador 
         Equipo escogerEquipos = GestionE.seleccionEquipo();
         if (escogerEquipos == null) {
             return;
@@ -112,7 +113,7 @@ los 30 nombres
     
     
     
-    public static void AgregarJugador() {
+    public static void AgregarJugador() {  // Metodo de agregar jugador  
         
         if (Jugador.cantidadJugador == 70) {
             JOptionPane.showMessageDialog(null, "Este Sistema solo puede gestionar 70 Jugadores.");
