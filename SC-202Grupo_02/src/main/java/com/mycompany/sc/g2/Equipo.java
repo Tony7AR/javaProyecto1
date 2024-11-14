@@ -62,7 +62,7 @@ public class Equipo {
     
     // || METODOS ||
     
-    private void mostrarDetallesEquipo (){
+    public void mostrarDetallesEquipo (){
         JOptionPane.showMessageDialog(null, "DATOS DEL EQUIPO: " + getIdEquipo()+
                 "\nNombre de Equipo: " + getNombreEquipo()+ "\nJugadores: " + getJugadoresE()+ "\nPartidos Jugados: " 
                 + getPartidosJugados()+ "\nPartidos Ganados: " + getPartidosGanados()+ "\nPartidos Perdidos: " + getPartidosPerdidos()+"\nPartidos Empatados: "

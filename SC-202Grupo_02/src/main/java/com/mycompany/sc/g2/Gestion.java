@@ -66,7 +66,7 @@ public class Gestion {
 
             switch (opt) {
                 case 1: //Mostrar Equipos
-                    GestionE.seleccionEquipo();
+                    GestionE.MostrarEquipo();
                     break;
                 case 2: //Agregar Nuevo Equipo
                     GestionE.AgregarEquipo();

@@ -23,23 +23,31 @@ public class GestionE {
     private static Equipo equipo8;
     private static Equipo equipo9;
     private static Equipo equipo10;
-    
+
     private static Equipo equipos[] = new Equipo[10];
-    
+
+    public static void MostrarEquipo() {
+        Equipo equipo = seleccionEquipo();
+        if (seleccionEquipo() == null) {
+            return;
+        }
+        equipo.mostrarDetallesEquipo();
+    }
+
     public static void AgregarEquipo() {
-        
+
         if (Equipo.cantidadEquipos == 10) {
             JOptionPane.showMessageDialog(null, "Este Sistema solo puede gestionar 10 Equipos.");
             return;
-            
+
         }
-        
+
         equipos[0] = equipo1;
-        equipos[1] = getEquipo2();
-        equipos[2] = getEquipo3();
-        
+        equipos[1] = equipo2;
+        equipos[2] = equipo3;
+
         String nombreEquipo = JOptionPane.showInputDialog("Ingrese el nombre del Equipo #" + (Equipo.cantidadEquipos + 1) + ": ");
-        
+
         switch (Equipo.cantidadEquipos) {
             case 3:
                 equipo4 = new Equipo(103, nombreEquipo);
@@ -53,7 +61,7 @@ public class GestionE {
                 equipo6 = new Equipo(105, nombreEquipo);
                 equipos[5] = equipo6;
                 break;
-            
+
             case 6:
                 equipo7 = new Equipo(106, nombreEquipo);
                 equipos[6] = equipo7;
@@ -70,17 +78,17 @@ public class GestionE {
                 equipo10 = new Equipo(109, nombreEquipo);
                 equipos[9] = equipo10;
                 break;
-            
+
         }
     }
-    
+
     public static Equipo seleccionEquipo() {
         if (Equipo.cantidadEquipos == 0) {
             JOptionPane.showMessageDialog(null,
                     "No se ha agregado ningun Equipo al sistema.");
             return null;
         }
-        
+
         int valorBoton = JOptionPane.showOptionDialog(
                 null,
                 "¿Seleccione un Equipo",
@@ -90,75 +98,78 @@ public class GestionE {
                 null,
                 botonesSE(),
                 "Equipo 1");
-        
+
         switch (valorBoton) {
             case 0:
-                setEquipo1(equipo1);
+                return equipo1;
             case 1:
-                setEquipo2(equipo2);
+                return equipo2;
             case 2:
-                setEquipo3(equipo3);
+                return equipo3;
             case 3:
-                setEquipo4(equipo4);
+                return equipo4;
             case 4:
-                setEquipo5(equipo5);
+                return equipo5;
             case 5:
-                setEquipo6(equipo6);
+                return equipo6;
             case 6:
-                setEquipo7(equipo7);
+                return equipo7;
             case 7:
-                setEquipo8(equipo8);
+                return equipo8;
             case 8:
-                setEquipo9(equipo9);
+                return equipo9;
             case 9:
-                setEquipo10(equipo10);
+                return equipo10;
         }
-        
+
         return null;
     }
-    
+
     private static String[] botonesSE() {
-        for (int i = 0; i < getEquipos().length; i++) {
-            if (i == 0) {
-                String botonesSE[] = {"Equipo #1"};
-                return botonesSE;
-            }else if (i == 1){
-                String botonesSE[] = {"Equipo #1","Equipo #2" };
-                return botonesSE;
-            }else if (i == 2){
-                String botonesSE[] = {"Equipo #1","Equipo #2","Equipo #3" };
-                return botonesSE;
-            }else if (i == 3){
-                String botonesSE[] = {"Equipo #1","Equipo #2","Equipo #3","Equipo #4" };
-                return botonesSE;
-            }else if (i == 4){
-                String botonesSE[] = {"Equipo #1","Equipo #2","Equipo #3","Equipo #4","Equipo #5" };
-                return botonesSE;
-            }else if (i == 5){
-                String botonesSE[] = {"Equipo #1","Equipo #2","Equipo #3","Equipo #4","Equipo #5","Equipo #6" };
-                return botonesSE;
-            }else if (i == 6){
-                String botonesSE[] = {"Equipo #1","Equipo #2","Equipo #3","Equipo #4","Equipo #5","Equipo #6","Equipo #7" };
-                return botonesSE;
-            }else if (i == 7){
-                String botonesSE[] = {"Equipo #1","Equipo #2","Equipo #3","Equipo #4","Equipo #5","Equipo #6","Equipo #7","Equipo #8" };
-                return botonesSE;
-            }else if (i == 8){
-                String botonesSE[] = {"Equipo #1","Equipo #2","Equipo #3","Equipo #4","Equipo #5","Equipo #6","Equipo #7","Equipo #8","Equipo #9" };
-                return botonesSE;
-            }else if (i == 9){
-                String botonesSE[] = {"Equipo #1","Equipo #2","Equipo #3","Equipo #4","Equipo #5","Equipo #6","Equipo #7","Equipo #8","Equipo #9","Equipo #10" };
-                return botonesSE;
-            }
-        }
-      
+       
+       int i;
+       i = equipos.length;
+       
+       if (i == 0) {
+           String botonesSE[] = {"Equipo #1"};
+           return botonesSE;
+       } else if (i == 1) {
+           String botonesSE[] = {"Equipo #1", "Equipo #2"};
+           return botonesSE;
+       } else if (i == 2) {
+           String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3"};
+           return botonesSE;
+       } else if (i == 3) {
+           String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3", "Equipo #4"};
+           return botonesSE;
+       } else if (i == 4) {
+           String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3", "Equipo #4", "Equipo #5"};
+           return botonesSE;
+       } else if (i == 5) {
+           String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3", "Equipo #4", "Equipo #5", "Equipo #6"};
+           return botonesSE;
+       } else if (i == 6) {
+           String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3", "Equipo #4", "Equipo #5", "Equipo #6", "Equipo #7"};
+           return botonesSE;
+       } else if (i == 7) {
+           String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3", "Equipo #4", "Equipo #5", "Equipo #6", "Equipo #7", "Equipo #8"};
+           return botonesSE;
+       } else if (i == 8) {
+           String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3", "Equipo #4", "Equipo #5", "Equipo #6", "Equipo #7", "Equipo #8", "Equipo #9"};
+           return botonesSE;
+       } else if (i == 9) {
+           String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3", "Equipo #4", "Equipo #5", "Equipo #6", "Equipo #7", "Equipo #8", "Equipo #9", "Equipo #10"};
+           return botonesSE;
+       }
+
+        
+
         return null;
     }
 
     // || CONSTRUCTORES ||
     // || METODOS ||
     // || GETS AND SETS ||
-
     public static Equipo getEquipo1() {
         return equipo1;
     }
@@ -246,6 +257,5 @@ public class GestionE {
     public static void setEquipos(Equipo[] equipos) {
         GestionE.equipos = equipos;
     }
-    
-    
+
 }
