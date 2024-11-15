@@ -9,6 +9,7 @@ INTEGRANTES: OSCAR SOLÍS BARRIENTOS, ANTHONY AZOFEIFA RAMÍREZ, ALESSANDRO BOGA
 */
 
 public enum Estado {
+    //Clase Enum para almacenar los estados de los jugadores
     suplente, titular, libre, sinEstado
     
 }

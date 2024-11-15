@@ -12,7 +12,7 @@ INTEGRANTES: OSCAR SOLÍS BARRIENTOS, ANTHONY AZOFEIFA RAMÍREZ, ALESSANDRO BOGA
 public class Gestion {
 
     // || MÉTODOS ||
-    // Métodos de gestión para agregar, editar y mostrar elementos en el sistema
+    // Métodos de gestión para agregar, editar y mostrar elementos del submenu
 
     public static void MenuGestionJ(){
         int opt;

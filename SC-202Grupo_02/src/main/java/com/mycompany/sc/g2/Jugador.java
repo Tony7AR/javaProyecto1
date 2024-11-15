@@ -36,7 +36,7 @@ public class Jugador {
     
     // || CONSTRUCTORES ||
     
-    //String nombre
+    //se crea el constructor de manera estatico para definir los parametros una vez creado la instancia 
     public Jugador (String nombreJugador, int idJugador , Estado estado, Posicion posicion  ){
         this.idJugador = getIdJugador();
         this.nombreJugador = getNombreJugador();
@@ -60,6 +60,7 @@ public class Jugador {
     
     
     // || METODOS ||
+    // Metodo para ahorrar un proceso de escritura de código futuro para poder ser utilizado llamando al metodo
     public void mostrarDetallesJugador (){
         JOptionPane.showMessageDialog(null, "ID: " + getIdJugador()+
                 "\nNombre: " + getNombreJugador()+ "\nPosición: " + getPosicion()+ "\nEquipo: " 
@@ -69,7 +70,7 @@ public class Jugador {
     
     
     
-    
+    //Metodo para ahorrar un proceso de codigo futuro,funcion: pedirle al usuario que escoja la posicion
     public Posicion asignarPosicion (){
         
         String botonesPosicion[] = {"Delantero", "Mediocampista", "Defensa", "Portero"};
@@ -94,7 +95,7 @@ public class Jugador {
         }
         return getPosicion();
     }
-    
+    //Metodo para ahorrar un proceso de codigo futuro,funcion: pedirle al usuario que escoja el estado
     public Estado asignarEstado (){
         String botonesEstado[] = {"Titular", "Suplente", "Libre"};
         int botonEstado = JOptionPane.showOptionDialog(null, "Seleccione un Estado para el Jugador.", "Seleccionar Estado", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, botonesEstado, "Libre");
@@ -158,7 +159,8 @@ public class Jugador {
         
         return estado;
     }
-
+    
+    
     public void setEstado(Estado estado) {
         if (estado == Estado.sinEstado) {
             asignarEstado();

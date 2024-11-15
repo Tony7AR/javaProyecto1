@@ -13,16 +13,9 @@ INTEGRANTES: OSCAR SOLÍS BARRIENTOS, ANTHONY AZOFEIFA RAMÍREZ, ALESSANDRO BOGA
 public class GestionJ {
 
     // || ATRIBUTOS ||
-/*
-los 30 nombres
-     */
-//    int edades[] = new int[5];
-//
-//        //nombre arreglo
-//        edades[2] = 52;
-//        edades[0] = 18;
-//        edades[4] = edades[2]- edades[0];
-//    "Alessandro Calero", 10, Estado.titular
+
+    // Manera de crear la instancia de los jugadores
+    //Metodo Temporal
     private static Jugador jugador1 = new Jugador ("Alessandro Calero", 10, Estado.titular, Posicion.delantero);//Equipo 1
     private static Jugador jugador2 = new Jugador("Carlos Gómez", 11, Estado.suplente, Posicion.defensa);//Equipo1
     private static Jugador jugador3= new Jugador("David Matínez", 12, Estado.titular, Posicion.delantero);//Equipo 1
@@ -93,12 +86,18 @@ los 30 nombres
     private static Jugador jugador68;
     private static Jugador jugador69;
     private static Jugador jugador70;
-
+    
+    //Se crea el arreglo estatico y se inicializa
     private static Jugador  jugadores []= new Jugador[70];
     
     
 
-    // || MÉTODOS PARA EL MENÚ ||
+    // || MÉTODOS PARA EL SUBMENÚ ||
+
+      // || MÉTODOS GENERALES ||
+    
+    //Metodo que va ser llamado por la clase correspondiente para mostrar los jugadores
+    //PENDIENTE DE TERMINAR
     public static void MostrarJugador() {
         Equipo escogerEquipos = GestionE.seleccionEquipo();
         if (escogerEquipos == null) {
@@ -109,9 +108,8 @@ los 30 nombres
 
     }
     
-    
-    
-    
+    //Metodo que va ser llamado por la clase correspondiente para agregar jugadores
+    //Metodo Temporal
     public static void AgregarJugador() {
         
         if (Jugador.cantidadJugador == 70) {
@@ -119,6 +117,7 @@ los 30 nombres
             return;
             
         }
+        //asignarle una posicion en el arreglo a la instancia
         jugadores[0] = jugador1;
         jugadores[1] = jugador2;
         jugadores[2] = jugador3;
@@ -323,11 +322,10 @@ los 30 nombres
         }
     }
     
+    //Metodo que va ser llamado por la clase correspondiente para Editar los jugadores
+    //PENDIENTE DE TERMINAR
     
-
-      // || MÉTODOS GENERALES ||
-    
-    
+    /*
     public static void EditarJugador() { //Metodo para editar jugadores 
         Jugador jugador == cantidadJugador();
         if (jugador == null) {
@@ -340,12 +338,17 @@ los 30 nombres
 
         JOptionPaneptionPane.showMessageDialog(null, "Los datos han sido cambiados exitosamente");
   }
-
+*/
+    //Metodo que va ser llamado por la clase correspondiente para Eliminar Jugadores
+    //PENDIENTE DE TERMINAR
     public static void EliminarJugador() {
 
-    }6
+    }
 
-
+//Metodo que va ser llamado por la clase correspondiente para seleccionar jugadores
+    //PENDIENTE DE TERMINAR
+    
+    /*
     private static Jugador seleccionJugador() { // Metodo para seleccionar jugadores 
 
         if (Jugador.cantidadJugador == 0) {
@@ -357,6 +360,9 @@ los 30 nombres
 
         return null;
     }
+    */
+    
+    
     
     // || GETS AND SETS ||
 
