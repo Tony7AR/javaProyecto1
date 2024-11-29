@@ -1,5 +1,8 @@
 package com.mycompany.sc.g2;
 
+import java.util.Random;
+import javax.swing.JOptionPane;
+
 import javax.swing.JOptionPane;
 
 /*
@@ -15,7 +18,7 @@ public class Equipo {
     // || ATRIBUTOS ||
     private int idEquipo;
     private String nombreEquipo;
-    private Jugador jugadoresE; //cambiar por listado
+    GestionJ jugadores[]; //cambiar por listado
     private int partidosJugados;
     private int partidosGanados;
     private int partidosEmpatados;
@@ -25,7 +28,7 @@ public class Equipo {
     public int posesionBalon;
     public static int consecutivoIdEquipo = 100;
     public static int cantidadEquipos = 0;
-
+    Random random = new Random();
 
     
     
@@ -40,7 +43,7 @@ public class Equipo {
     public Equipo (int idEquipo, String nombreEquipo){
         this.idEquipo = consecutivoIdEquipo;
         this.nombreEquipo = nombreEquipo;
-        this.jugadoresE = getJugadoresE();
+        this.jugadores = null;
         this.partidosJugados = getPartidosJugados();
         this.partidosGanados = getPartidosGanados();
         this.partidosPerdidos = getPartidosPerdidos();
@@ -61,20 +64,30 @@ public class Equipo {
     
     
     // || METODOS ||
+     
     
-    public void mostrarDetallesEquipo (){
-        JOptionPane.showMessageDialog(null, "DATOS DEL EQUIPO: " + getIdEquipo()+
-                "\nNombre de Equipo: " + getNombreEquipo()+ "\nJugadores: " + getJugadoresE()+ "\nPartidos Jugados: " 
-                + getPartidosJugados()+ "\nPartidos Ganados: " + getPartidosGanados()+ "\nPartidos Perdidos: " + getPartidosPerdidos()+"\nPartidos Empatados: "
-                + getPartidosEmpatados()+"\nGoles a Favor: "+ golesFavor + "\nGoles en Contra: "+ golesContra +"\nPosesión del Balón " +posesionBalon );
+    
+    
+    public String mostrarDetallesE (boolean conSaltoLinea){
+        if (conSaltoLinea) {
+            return "DATOS DEL Equipo #"+getIdEquipo()+
+                    "\nNombre: "+getNombreEquipo()+
+                    "\nJugadores: "+null+
+                    "\nPartidos Jugados: "+getPartidosJugados()+
+                    "\nPartidos Ganados: "+ getPartidosGanados()+
+                    "\nPartidos Perdidos "+ getPartidosPerdidos()+
+                    "\nPartidos Empatados: " + getPartidosEmpatados()+
+                    "\nGoles a Favor: "+ golesFavor+
+                    "\nGoles en Contra: "+ golesContra+
+                    "\nPosesión del Balón: "+ posesionBalon;
+            
+            
+            
+        }
+        return "Equipo #: "+getIdEquipo()+ ", Nombre: "+getNombreEquipo()+ ", Jugadores: "+null+
+                "Partidos Jugados: "+getPartidosJugados()+ "Partidos Ganados: "+ getPartidosGanados()+"Partidos Perdidos "+ getPartidosPerdidos()+
+                "Partidos Empatados: " + getPartidosEmpatados()+"Goles a Favor: "+ golesFavor+"Goles en Contra: "+ golesContra+"Posesión del Balón: "+ posesionBalon;
     }
-    
-    public Jugador asignarJugadorEquipo(){
-        
-        return getJugadoresE();
-    }
-    
-    
     
     
     
@@ -100,14 +113,7 @@ public class Equipo {
         this.nombreEquipo = nombreEquipo;
     }
 
-    public Jugador getJugadoresE() {
-        return jugadoresE;
-    }
-
-    public void setJugadoresE(Jugador jugadoresE) {
-        this.jugadoresE = jugadoresE;
-    }
-
+ 
     public int getPartidosJugados() {
         return partidosJugados;
     }

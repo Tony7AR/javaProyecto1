@@ -13,18 +13,8 @@ INTEGRANTES: OSCAR SOLÍS BARRIENTOS, ANTHONY AZOFEIFA RAMÍREZ, ALESSANDRO BOGA
 public class GestionE {
 
     // || ATRIBUTOS ||
-    private static Equipo equipo1 = new Equipo(100, "Super Campeones");
-    private static Equipo equipo2 = new Equipo(101, "Teen Titans");
-    private static Equipo equipo3 = new Equipo(102, "Ñaprissa");
-    private static Equipo equipo4;
-    private static Equipo equipo5;
-    private static Equipo equipo6;
-    private static Equipo equipo7;
-    private static Equipo equipo8;
-    private static Equipo equipo9;
-    private static Equipo equipo10;
-
-    private static Equipo equipos[] = new Equipo[10];
+    
+    public static Equipo equipos[] = new Equipo[10];
 
     public static void MostrarEquipo() {
         Equipo equipo = seleccionEquipo();
@@ -42,9 +32,7 @@ public class GestionE {
 
         }
 
-        equipos[0] = equipo1;
-        equipos[1] = equipo2;
-        equipos[2] = equipo3;
+        
 
         String nombreEquipo = JOptionPane.showInputDialog("Ingrese el nombre del Equipo #" + (Equipo.cantidadEquipos + 1) + ": ");
 

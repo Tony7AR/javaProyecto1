@@ -42,7 +42,7 @@ public class Jugador {
     // || CONSTRUCTORES ||
     
     //se crea el constructor de manera estatico para definir los parametros una vez creado la instancia 
-    public Jugador (String nombreJugador, int idJugador , Estado estado, Posicion posicion  ){
+    public Jugador (int idJugador, String nombreJugador, Equipo equipoPertenencia, Estado estado, Posicion posicion  ){
         this.idJugador = getIdJugador();
         this.nombreJugador = getNombreJugador();
         setPosicion(posicion);
