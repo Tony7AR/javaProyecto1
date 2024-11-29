@@ -25,7 +25,12 @@ public class Jugador {
     public static int consecutivoID = 10;
     public static int cantidadJugador = 0;
     
+    //cuadro de presentar equipos disponibles tambien boton sin equipo o ningun 
+    // no se pide si es titular
     
+    //relacion jugador y equipo
+    
+    //gestion de equipos que solo muestre los jugadores libres
     
     
     
@@ -61,12 +66,21 @@ public class Jugador {
     
     // || METODOS ||
     // Metodo para ahorrar un proceso de escritura de código futuro para poder ser utilizado llamando al metodo
-    public void mostrarDetallesJugador (){
-        JOptionPane.showMessageDialog(null, "ID: " + getIdJugador()+
-                "\nNombre: " + getNombreJugador()+ "\nPosición: " + getPosicion()+ "\nEquipo: " 
-                + getEquipoPertenencia()+ "\nEstado: " + getEstado()+ "\nGoles Anotados: " + getGolesAnotados());
+   
+    public String mostrarDetallesJ (boolean conSaltoLinea){
+        if (conSaltoLinea) {
+            return "DATOS DEL JUGADOR #"+getIdJugador()+
+                    "\nNombre: "+getNombreJugador()+
+                    "\nEquipo: "+getEquipoPertenencia()+
+                    "\nPosicion: "+getPosicion()+
+                    "\nEstado: "+ getEstado()+
+                    "\nGoles Anotados: " + getGolesAnotados();
+            
+            
+        }
+        return "ID #: "+getIdJugador()+ ", Nombre: "+getNombreJugador()+ ", Equipo: "+getEquipoPertenencia()
+                + ", Posición: "+getPosicion()+ ", Estado: "+ getEstado()+"Goles Anotados: "+ getGolesAnotados();
     }
-    
     
     
     

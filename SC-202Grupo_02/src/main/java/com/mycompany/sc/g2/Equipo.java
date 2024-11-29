@@ -15,7 +15,7 @@ public class Equipo {
     // || ATRIBUTOS ||
     private int idEquipo;
     private String nombreEquipo;
-    private Jugador jugadoresE;
+    private Jugador jugadoresE; //cambiar por listado
     private int partidosJugados;
     private int partidosGanados;
     private int partidosEmpatados;
