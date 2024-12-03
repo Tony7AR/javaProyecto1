@@ -42,12 +42,12 @@ public class Jugador {
     // || CONSTRUCTORES ||
     
     //se crea el constructor de manera estatico para definir los parametros una vez creado la instancia 
-    public Jugador (int idJugador, String nombreJugador, Equipo equipoPertenencia, Estado estado, Posicion posicion  ){
+    public Jugador (String nombreJugador,  Estado estado, Posicion posicion  ){
         this.idJugador = getIdJugador();
         this.nombreJugador = getNombreJugador();
-        setPosicion(posicion);
+        this.estado = getEstado();
         this.equipoPertenencia = equipoPertenencia;
-        setEstado(estado);
+        this.posicion = getPosicion();
         this.golesAnotados = consecutivoGoles;
         this.accionesTotales = consecutivoAcciones;
         consecutivoID++;
@@ -85,30 +85,7 @@ public class Jugador {
     
     
     //Metodo para ahorrar un proceso de codigo futuro,funcion: pedirle al usuario que escoja la posicion
-    public Posicion asignarPosicion (){
-        
-        String botonesPosicion[] = {"Delantero", "Mediocampista", "Defensa", "Portero"};
-        int botonPosicion = JOptionPane.showOptionDialog(null, "Seleccione una Posición", "Seleccionar Posición", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, botonesPosicion, "Delantero");
-
-        switch (botonPosicion) {
-            case 0: //Delantero
-                setPosicion(Posicion.delantero);
-                break;
-            case 1://Mediocampista
-                setPosicion(Posicion.medioCampista);
-                break;
-                
-            case 2://Defensa
-                setPosicion(Posicion.defensa);
-                break;
-                
-            case 3://Portero
-                setPosicion(Posicion.portero);
-                break;
-                    
-        }
-        return getPosicion();
-    }
+    
     //Metodo para ahorrar un proceso de codigo futuro,funcion: pedirle al usuario que escoja el estado
     public Estado asignarEstado (){
         String botonesEstado[] = {"Titular", "Suplente", "Libre"};
@@ -154,10 +131,7 @@ public class Jugador {
     }
 
     public void setPosicion(Posicion posicion) {
-       if (posicion == Posicion.sinPosicion) {
-            asignarPosicion();
-            
-        }
+       
         this.posicion = posicion;
     }
 

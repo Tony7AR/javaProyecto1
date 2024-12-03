@@ -1,5 +1,6 @@
 package com.mycompany.sc.g2;
 
+import static com.mycompany.sc.g2.GestionJ.jugadores;
 import javax.swing.JOptionPane;
 
 /*
@@ -17,118 +18,67 @@ public class GestionE {
     public static Equipo equipos[] = new Equipo[10];
 
     public static void MostrarEquipo() {
-        Equipo equipo = seleccionEquipo();
-        if (seleccionEquipo() == null) {
-            return;
+        System.out.println("---Lista de Equipos---");
+        
+        if (equipos[0] == null) {
+            JOptionPane.showMessageDialog(null, "¡No hay equipos en el Sistema! ");
+            
         }
-        equipo.mostrarDetallesEquipo();
+        for (int i = 0; i < Equipo.cantidadEquipos; i++) {
+            JOptionPane.showMessageDialog(null, (i+1)+ "-"+ equipos[i].mostrarDetallesE(true));
+            //System.out.println((i+1)+ "-"+ equipos[i].mostrarDetallesE(false));
+        }
     }
 
     public static void AgregarEquipo() {
 
-        if (Equipo.cantidadEquipos == 10) {
+        if (Equipo.cantidadEquipos < equipos.length) {
+            
+                
+                    String nombreEquipo = JOptionPane.showInputDialog("Ingrese el nombre del Equipo #" + (Equipo.cantidadEquipos + 1) + ": ");
+                    equipos[Equipo.cantidadEquipos] = new Equipo(nombreEquipo);
+                
+            
+        }else{
             JOptionPane.showMessageDialog(null, "Este Sistema solo puede gestionar 10 Equipos.");
-            return;
-
         }
-
         
-
-        String nombreEquipo = JOptionPane.showInputDialog("Ingrese el nombre del Equipo #" + (Equipo.cantidadEquipos + 1) + ": ");
-
-        switch (Equipo.cantidadEquipos) {
-            case 3:
-                equipo4 = new Equipo(103, nombreEquipo);
-                equipos[3] = equipo4;
-                break;
-            case 4:
-                equipo5 = new Equipo(104, nombreEquipo);
-                equipos[4] = equipo5;
-                break;
-            case 5:
-                equipo6 = new Equipo(105, nombreEquipo);
-                equipos[5] = equipo6;
-                break;
-
-            case 6:
-                equipo7 = new Equipo(106, nombreEquipo);
-                equipos[6] = equipo7;
-                break;
-            case 7:
-                equipo8 = new Equipo(107, nombreEquipo);
-                equipos[7] = equipo8;
-                break;
-            case 8:
-                equipo9 = new Equipo(108, nombreEquipo);
-                equipos[8] = equipo9;
-                break;
-            case 9:
-                equipo10 = new Equipo(109, nombreEquipo);
-                equipos[9] = equipo10;
-                break;
-
-        }
+        
+        
+        
+        
     }
 
     public static Equipo seleccionEquipo() {
-        if (Equipo.cantidadEquipos == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "No se ha agregado ningun Equipo al sistema.");
-            return null;
-        }
-
-        int valorBoton = JOptionPane.showOptionDialog(
-                null,
-                "¿Seleccione un Equipo",
-                "Selecccionar Equipo",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null,
-                botonesSE(),
-                "Equipo 1");
-
-        switch (valorBoton) {
-            case 0:
-                return equipo1;
-            case 1:
-                return equipo2;
-            case 2:
-                return equipo3;
-            case 3:
-                return equipo4;
-            case 4:
-                return equipo5;
-            case 5:
-                return equipo6;
-            case 6:
-                return equipo7;
-            case 7:
-                return equipo8;
-            case 8:
-                return equipo9;
-            case 9:
-                return equipo10;
-        }
-
+        System.out.println("---Lista de Equipos---");
+        
+        int valor = JOptionPane.showOptionDialog(null, "Seleccione el Equipo"
+                , "Seleccione", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, botonesSE()
+                , "");
+        
+        
         return null;
     }
 
-    private static String[] botonesSE() {
+    public static String[] botonesSE() {
+        
        
+        
+        
        int i;
        i = equipos.length;
        
        if (i == 0) {
-           String botonesSE[] = {"Equipo #1"};
+           String botonesSE[] = {equipos[0].getNombreEquipo()};
            return botonesSE;
        } else if (i == 1) {
-           String botonesSE[] = {"Equipo #1", "Equipo #2"};
+           String botonesSE[] = {equipos[0].getNombreEquipo(),equipos[1].getNombreEquipo()};
            return botonesSE;
        } else if (i == 2) {
-           String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3"};
+           String botonesSE[] = {equipos[0].getNombreEquipo(),equipos[1].getNombreEquipo(),equipos[2].getNombreEquipo()};
            return botonesSE;
        } else if (i == 3) {
-           String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3", "Equipo #4"};
+           String botonesSE[] = {equipos[0].getNombreEquipo(),equipos[1].getNombreEquipo(),equipos[2].getNombreEquipo(),equipos[3].getNombreEquipo()};
            return botonesSE;
        } else if (i == 4) {
            String botonesSE[] = {"Equipo #1", "Equipo #2", "Equipo #3", "Equipo #4", "Equipo #5"};
@@ -158,92 +108,9 @@ public class GestionE {
     // || CONSTRUCTORES ||
     // || METODOS ||
     // || GETS AND SETS ||
-    public static Equipo getEquipo1() {
-        return equipo1;
-    }
+    
 
-    public static void setEquipo1(Equipo equipo1) {
-        GestionE.equipo1 = equipo1;
-    }
-
-    public static Equipo getEquipo2() {
-        return equipo2;
-    }
-
-    public static void setEquipo2(Equipo equipo2) {
-        GestionE.equipo2 = equipo2;
-    }
-
-    public static Equipo getEquipo3() {
-        return equipo3;
-    }
-
-    public static void setEquipo3(Equipo equipo3) {
-        GestionE.equipo3 = equipo3;
-    }
-
-    public static Equipo getEquipo4() {
-        return equipo4;
-    }
-
-    public static void setEquipo4(Equipo equipo4) {
-        GestionE.equipo4 = equipo4;
-    }
-
-    public static Equipo getEquipo5() {
-        return equipo5;
-    }
-
-    public static void setEquipo5(Equipo equipo5) {
-        GestionE.equipo5 = equipo5;
-    }
-
-    public static Equipo getEquipo6() {
-        return equipo6;
-    }
-
-    public static void setEquipo6(Equipo equipo6) {
-        GestionE.equipo6 = equipo6;
-    }
-
-    public static Equipo getEquipo7() {
-        return equipo7;
-    }
-
-    public static void setEquipo7(Equipo equipo7) {
-        GestionE.equipo7 = equipo7;
-    }
-
-    public static Equipo getEquipo8() {
-        return equipo8;
-    }
-
-    public static void setEquipo8(Equipo equipo8) {
-        GestionE.equipo8 = equipo8;
-    }
-
-    public static Equipo getEquipo9() {
-        return equipo9;
-    }
-
-    public static void setEquipo9(Equipo equipo9) {
-        GestionE.equipo9 = equipo9;
-    }
-
-    public static Equipo getEquipo10() {
-        return equipo10;
-    }
-
-    public static void setEquipo10(Equipo equipo10) {
-        GestionE.equipo10 = equipo10;
-    }
-
-    public static Equipo[] getEquipos() {
-        return equipos;
-    }
-
-    public static void setEquipos(Equipo[] equipos) {
-        GestionE.equipos = equipos;
-    }
+   
+   
 
 }

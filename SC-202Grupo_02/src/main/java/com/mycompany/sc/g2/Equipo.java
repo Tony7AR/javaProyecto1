@@ -40,10 +40,10 @@ public class Equipo {
     
     // || CONSTRUCTORES ||
     
-    public Equipo (int idEquipo, String nombreEquipo){
+    public Equipo (String nombreEquipo){
         this.idEquipo = consecutivoIdEquipo;
         this.nombreEquipo = nombreEquipo;
-        this.jugadores = null;
+        this.jugadores = jugadores;
         this.partidosJugados = getPartidosJugados();
         this.partidosGanados = getPartidosGanados();
         this.partidosPerdidos = getPartidosPerdidos();
@@ -72,7 +72,7 @@ public class Equipo {
         if (conSaltoLinea) {
             return "DATOS DEL Equipo #"+getIdEquipo()+
                     "\nNombre: "+getNombreEquipo()+
-                    "\nJugadores: "+null+
+                    "\nJugadores: "+jugadores+
                     "\nPartidos Jugados: "+getPartidosJugados()+
                     "\nPartidos Ganados: "+ getPartidosGanados()+
                     "\nPartidos Perdidos "+ getPartidosPerdidos()+

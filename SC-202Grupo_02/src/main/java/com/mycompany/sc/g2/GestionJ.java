@@ -11,106 +11,73 @@ INTEGRANTES: OSCAR SOLÍS BARRIENTOS, ANTHONY AZOFEIFA RAMÍREZ, ALESSANDRO BOGA
 
  */
 public class GestionJ {
-
-    // || ATRIBUTOS ||
-
-   
-    
     //Se crea el arreglo estatico y se inicializa
-    public static Jugador jugadores[]= new Jugador[70];
-    
-    
-    
-    
-    
+
+    public static Jugador jugadores[] = new Jugador[70];
 
     // || MÉTODOS PARA EL SUBMENÚ ||
-
-    
-    
     //Metodo que va ser llamado por la clase correspondiente para mostrar los jugadores
     //PENDIENTE DE TERMINAR
     public static void MostrarJugador() {
-        Equipo escogerEquipos = GestionE.seleccionEquipo();
-        if (escogerEquipos == null) {
-            return;
-        }
-        
+        GestionE.seleccionEquipo();
         
 
     }
-    
+
     //Metodo que va ser llamado por la clase correspondiente para agregar jugadores
     //Metodo Temporal
     public static void AgregarJugador() {
-        
-        
-        
-        if (Jugador.cantidadJugador < jugadores.length ) {
-            String nombre = JOptionPane.showInputDialog("Ingrese el nombre del jugador: ");
-            String nombre = JOptionPane.showInputDialog("Ingrese el nombre del estudiante: ");
-            int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del estudiante: "));
-            String curso = JOptionPane.showInputDialog("Ingrese el curso del estudiante: ");
+
+        if (Jugador.cantidadJugador < jugadores.length) {
             
-            jugadores[Jugador.cantidadJugador] = new Jugador(nombre, equipoPertenencia, Estado.sinEstado, Posicion.sinPosicion);
-            JOptionPane.showMessageDialog(null, "Estudiante agregado correctamente.");
             
+                String nombreJugador = JOptionPane.showInputDialog("Ingrese el nombre del Jugador #" + (Jugador.cantidadJugador + 1) + ": ");
+                
+                Equipo equipoPertenencia = null;
+                jugadores[Jugador.cantidadJugador] = new Jugador(nombreJugador, Estado.sinEstado, asignarPosicion());
+            
+
+        
+            
+            
+
         }else{
-            JOptionPane.showMessageDialog(null, "No se puede agregar más de "+estudiantes.length +" estudiantes");
+            JOptionPane.showMessageDialog(null, "Este Sistema solo puede gestionar 70 Jugadores.");
         }
         
-        
-
         
     }
     
-    //Metodo que va ser llamado por la clase correspondiente para Editar los jugadores
-    //PENDIENTE DE TERMINAR
-    
-    /*
-    public static void EditarJugador() { //Metodo para editar jugadores 
-        Jugador jugador == cantidadJugador();
-        if (jugador == null) {
-            return;
-        }
-        String nombreJugador = JOptionPane.showInputDialog("Ingrese el nuevo nombre del jugador: ");
-        String IdJugador = JOptionPane.showInputDialog("Ingrese el nuevo ID del jugador: ");
-        jugador.setnombreJugador();
-        jugador.setidjugador();
+    public static Posicion asignarPosicion(){
+        Posicion posicion = null;
 
-        JOptionPaneptionPane.showMessageDialog(null, "Los datos han sido cambiados exitosamente");
-  }
-*/
-    //Metodo que va ser llamado por la clase correspondiente para Eliminar Jugadores
-    //PENDIENTE DE TERMINAR
-    public static void EliminarJugador() {
+                String botonesPosicion[] = {"Delantero", "Mediocampista", "Defensa", "Portero"};
+                int botonPosicion = JOptionPane.showOptionDialog(null, "Seleccione una Posición", "Seleccionar Posición", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, botonesPosicion, "Delantero");
 
-    }
+                switch (botonPosicion) {
+                    case 0: //Delantero
+                        posicion = Posicion.delantero;
+                        break;
+                    case 1://Mediocampista
+                        posicion = Posicion.medioCampista;
+                        break;
 
-//Metodo que va ser llamado por la clase correspondiente para seleccionar jugadores
-    //PENDIENTE DE TERMINAR
-    
-    /*
-    private static Jugador seleccionJugador() { // Metodo para seleccionar jugadores 
+                    case 2://Defensa
+                        posicion = Posicion.defensa;
+                        break;
 
-        if (Jugador.cantidadJugador == 0) {
-            JOptionPane.showMessageDialog(null, "No hay Jugadores en el Sistema.");
-            return null;
-        }
-        JOptionPane.showMessageDialog(null, todosJugadores(), "Mostrar Jugadores", JOptionPane.INFORMATION_MESSAGE);
-        todosJugadores();
+                    case 3://Portero
+                        posicion = Posicion.portero;
+                        break;
 
+                }
         return null;
     }
-    */
-    
-    
-    
-    // || GETS AND SETS ||
 
-    
-    
-    
-    
-    
 }
+
+
+
+// || ATRIBUTOS ||
+// || GETS AND SETS ||
+
