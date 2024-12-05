@@ -44,10 +44,10 @@ public class Equipo {
         this.idEquipo = consecutivoIdEquipo;
         this.nombreEquipo = nombreEquipo;
         this.jugadores = jugadores;
-        this.partidosJugados = getPartidosJugados();
-        this.partidosGanados = getPartidosGanados();
-        this.partidosPerdidos = getPartidosPerdidos();
-        this.partidosEmpatados = getPartidosEmpatados();
+        this.partidosJugados = partidosJugados;
+        this.partidosGanados = partidosGanados;
+        this.partidosPerdidos = partidosPerdidos;
+        this.partidosEmpatados = partidosEmpatados;
         this.golesFavor = golesFavor;
         this.golesContra = golesContra;
         this.posesionBalon = posesionBalon;
@@ -85,8 +85,8 @@ public class Equipo {
             
         }
         return "Equipo #: "+getIdEquipo()+ ", Nombre: "+getNombreEquipo()+ ", Jugadores: "+null+
-                "Partidos Jugados: "+getPartidosJugados()+ "Partidos Ganados: "+ getPartidosGanados()+"Partidos Perdidos "+ getPartidosPerdidos()+
-                "Partidos Empatados: " + getPartidosEmpatados()+"Goles a Favor: "+ golesFavor+"Goles en Contra: "+ golesContra+"Posesión del Balón: "+ posesionBalon;
+                ", Partidos Jugados: "+getPartidosJugados()+ ", Partidos Ganados: "+ getPartidosGanados()+", Partidos Perdidos "+ getPartidosPerdidos()+
+                ", Partidos Empatados: " + getPartidosEmpatados()+", Goles a Favor: "+ golesFavor+", Goles en Contra: "+ golesContra+", Posesión del Balón: "+ posesionBalon;
     }
     
     

@@ -24,7 +24,7 @@ public class Gestion {
                     + "2- Agregar Nuevo Jugador.\n"
                     + "3- Editar Jugador.\n"
                     + "4- Eliminar Jugador.\n"
-                    + "5- Salir del Menú.\n")));
+                    + "5- Salir al Menú Principal+.\n")));
 
             switch (opt) {
                 case 1: //Mostrar Jugadores
@@ -62,7 +62,7 @@ public class Gestion {
                     + "2- Agregar Nuevo Equipo.\n"
                     + "3- Agregar Jugador a un Equipo.\n"
                     + "4- Eliminar Jugador de un Equipo.\n"
-                    + "5- Salir del Menú.\n")));
+                    + "5- Salir al Menú Principal.\n")));
 
             switch (opt) {
                 case 1: //Mostrar Equipos

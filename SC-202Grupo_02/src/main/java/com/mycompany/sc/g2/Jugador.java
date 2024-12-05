@@ -9,9 +9,9 @@ INTEGRANTES: OSCAR SOLÍS BARRIENTOS, ANTHONY AZOFEIFA RAMÍREZ, ALESSANDRO BOGA
 || PROYECTO FÚTBOL CINCO ||
 
 
-*/
-
+ */
 public class Jugador {
+
     // || ATRIBUTOS ||
     private int idJugador;
     private int golesAnotados;
@@ -24,70 +24,45 @@ public class Jugador {
     public static int consecutivoAcciones = 0;
     public static int consecutivoID = 10;
     public static int cantidadJugador = 0;
-    
+
     //cuadro de presentar equipos disponibles tambien boton sin equipo o ningun 
     // no se pide si es titular
-    
     //relacion jugador y equipo
-    
     //gestion de equipos que solo muestre los jugadores libres
-    
-    
-    
-    
-    
-    
-    
-    
     // || CONSTRUCTORES ||
-    
     //se crea el constructor de manera estatico para definir los parametros una vez creado la instancia 
-    public Jugador (String nombreJugador,  Estado estado, Posicion posicion  ){
-        this.idJugador = getIdJugador();
-        this.nombreJugador = getNombreJugador();
-        this.estado = getEstado();
+    public Jugador(String nombreJugador, Estado estado, Posicion posicion) {
+        this.idJugador = consecutivoID;
+        this.nombreJugador = nombreJugador;
+        this.estado = estado;
         this.equipoPertenencia = equipoPertenencia;
-        this.posicion = getPosicion();
-        this.golesAnotados = consecutivoGoles;
-        this.accionesTotales = consecutivoAcciones;
+        this.posicion = posicion;
+        this.golesAnotados = 0;
+        this.accionesTotales = 0;
         consecutivoID++;
         cantidadJugador++;
-        
-        
+
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     // || METODOS ||
     // Metodo para ahorrar un proceso de escritura de código futuro para poder ser utilizado llamando al metodo
-   
-    public String mostrarDetallesJ (boolean conSaltoLinea){
+    public String mostrarDetallesJ(boolean conSaltoLinea) {
         if (conSaltoLinea) {
-            return "DATOS DEL JUGADOR #"+getIdJugador()+
-                    "\nNombre: "+getNombreJugador()+
-                    "\nEquipo: "+getEquipoPertenencia()+
-                    "\nPosicion: "+getPosicion()+
-                    "\nEstado: "+ getEstado()+
-                    "\nGoles Anotados: " + getGolesAnotados();
-            
-            
+            return "DATOS DEL JUGADOR #" + getIdJugador()
+                    + "\nNombre: " + getNombreJugador()
+                    + "\nEquipo: " + getEquipoPertenencia()
+                    + "\nPosicion: " + getPosicion()
+                    + "\nEstado: " + getEstado()
+                    + "\nGoles Anotados: " + getGolesAnotados();
+
         }
-        return "ID #: "+getIdJugador()+ ", Nombre: "+getNombreJugador()+ ", Equipo: "+getEquipoPertenencia()
-                + ", Posición: "+getPosicion()+ ", Estado: "+ getEstado()+"Goles Anotados: "+ getGolesAnotados();
+        return "ID #: " + getIdJugador() + ", Nombre: " + getNombreJugador() + ", Equipo: " + getEquipoPertenencia()
+                + ", Posición: " + getPosicion() + ", Estado: " + getEstado() + ", Goles Anotados: " + getGolesAnotados();
     }
-    
-    
-    
+
     //Metodo para ahorrar un proceso de codigo futuro,funcion: pedirle al usuario que escoja la posicion
-    
     //Metodo para ahorrar un proceso de codigo futuro,funcion: pedirle al usuario que escoja el estado
-    public Estado asignarEstado (){
+    public Estado asignarEstado() {
         String botonesEstado[] = {"Titular", "Suplente", "Libre"};
         int botonEstado = JOptionPane.showOptionDialog(null, "Seleccione un Estado para el Jugador.", "Seleccionar Estado", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, botonesEstado, "Libre");
 
@@ -104,15 +79,16 @@ public class Jugador {
                 break;
         }
         return getEstado();
-        
+
     }
-    // || GETS AND SETS ||
+
     
+    // || GETS AND SETS ||
+
     public int getIdJugador() {
         return idJugador;
     }
 
-    
     public void setIdJugador(int idJugador) {
         this.idJugador = idJugador;
     }
@@ -126,12 +102,12 @@ public class Jugador {
     }
 
     public Posicion getPosicion() {
-        
+
         return posicion;
     }
 
     public void setPosicion(Posicion posicion) {
-       
+        
         this.posicion = posicion;
     }
 
@@ -144,15 +120,14 @@ public class Jugador {
     }
 
     public Estado getEstado() {
-        
+
         return estado;
     }
-    
-    
+
     public void setEstado(Estado estado) {
         if (estado == Estado.sinEstado) {
             asignarEstado();
-            
+
         }
         this.estado = estado;
     }
@@ -172,9 +147,5 @@ public class Jugador {
     public void setAccionesTotales(int accionesTotales) {
         this.accionesTotales = accionesTotales;
     }
-    
-   
-    
-    
-    
+
 }
