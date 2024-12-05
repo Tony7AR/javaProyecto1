@@ -125,10 +125,7 @@ public class Jugador {
     }
 
     public void setEstado(Estado estado) {
-        if (estado == Estado.sinEstado) {
-            asignarEstado();
-
-        }
+        
         this.estado = estado;
     }
 

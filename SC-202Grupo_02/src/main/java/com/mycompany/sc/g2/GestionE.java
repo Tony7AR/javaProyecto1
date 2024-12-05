@@ -53,6 +53,11 @@ public class GestionE {
     }
 
     public static Equipo seleccionEquipo() {
+        if (Equipo.cantidadEquipos == 0) {
+            JOptionPane.showMessageDialog(null, "No hay equipos registrados\nPor favor vuelva al menu principal y agregue equipos");
+            return null;
+            
+        }
         String[] opciones = new String[Equipo.cantidadEquipos];
         for (int i = 0; i < Equipo.cantidadEquipos; i++) {
             opciones[i] = equipos[i].getNombreEquipo();
@@ -67,7 +72,10 @@ public class GestionE {
         return equipos[seleccion];  // Retorna el equipo seleccionado
     
     }
-
+   
+//    public static Equipo meterJugadores(){
+//        
+//    }
    
 
     // || CONSTRUCTORES ||

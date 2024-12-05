@@ -14,6 +14,10 @@ public class GestionJ {
     //Se crea el arreglo estatico y se inicializa
 
     public static Jugador jugadores[] = new Jugador[70];
+    public static Jugador jugadoresEquipoAT[] = new Jugador[5];
+    public static Jugador jugadoresEquipoBT[] = new Jugador[5];
+    public static Jugador jugadoresEquipoAS[] = new Jugador[5];
+    public static Jugador jugadoresEquipoBS[] = new Jugador[5];
 
     // || MÉTODOS PARA EL SUBMENÚ ||
     //Metodo que va ser llamado por la clase correspondiente para mostrar los jugadores
@@ -53,16 +57,27 @@ public class GestionJ {
         if (Jugador.cantidadJugador < jugadores.length) {
             int valorBtn =0;
             
-            valorBtn = JOptionPane.showOptionDialog(null, "Como desea agregar al jugador", "Seleccione", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String []{"A equipo", "Sin equipo"}, "Sin equipo");
-            if (valorBtn == 0) {
-                GestionE.seleccionEquipo();
+            valorBtn = JOptionPane.showOptionDialog(null, "Como desea agregar al jugador", "Seleccione", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String []{"Agregarlo con equipo", "Agregarlo sin equipo"}, "Agregarlo sin equipo");
+            if (Equipo.cantidadEquipos == 0) {
+                JOptionPane.showMessageDialog(null, "No hay equipos registrados\nPor favor vuelva al menu principal y agregue equipos");
+                
+
             }
-            String nombreJugador = JOptionPane.showInputDialog("Ingrese el nombre del Jugador #" + (Jugador.cantidadJugador + 1) + ": ");
+            if (valorBtn == 0) {//Agregar con Equipo 
+                
+                
+                GestionE.seleccionEquipo();
+                if (GestionE.seleccionEquipo() == GestionE.equipos[0]) {//Equipo 1
+                    cargarJugadoresLista(jugadoresEquipoAT, Estado.titular);
+                    
+                }
+            }else if (valorBtn == 1)
             
             
-//          
             
-            jugadores[Jugador.cantidadJugador] = new Jugador (nombreJugador, Estado.sinEstado, asignarPosicion());
+          
+            
+            
             JOptionPane.showMessageDialog(null, "¡Jugador agregado con éxito!");
 
         } else {
@@ -96,7 +111,19 @@ public class GestionJ {
         }
         return posicion;
     }
+    
+     public static void cargarJugadoresLista (Jugador jugadores[], Estado estado){
+        
+        String nombreJugador = JOptionPane.showInputDialog("Ingrese el nombre del Jugador #" + (Jugador.cantidadJugador + 1) + ": ");
 
+                    jugadores[Jugador.cantidadJugador] = new Jugador(nombreJugador, Estado.titular, GestionJ.asignarPosicion());
+                    JOptionPane.showMessageDialog(null, "¡Jugador agregado con éxito!");
+        
+    }
+    
+    
+    
+    
 }
 
 
